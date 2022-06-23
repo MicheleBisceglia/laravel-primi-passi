@@ -8,8 +8,13 @@
     <title>Document</title>
 </head>
 <body>
+    @if ($isLoggedIn)
+        <img class="user_img" src="{{ $img }}" alt="">
+        <span>Bentornato {{ $name }}!</span>
+    @else
+        <p>Fai login</p>
+    @endif
     <h1>Hello world</h1>
-    
 </body>
 </html>
 
@@ -17,12 +22,22 @@
     body {
         font-family: 'Nunito', sans-serif;
         background-color: lightskyblue;
+        color: white;
     }
     h1 {
         text-align: center;
         padding-top: 50px;
         font-size: 5rem;
-        color: white;
+    }
+    span {
+        font-size: 1.5rem;
+        padding-right: 10px;
+        margin-top: 0;
+    }
+    .user_img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
     }
 </style>
 
