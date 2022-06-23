@@ -8,38 +8,88 @@
     <title>Document</title>
 </head>
 <body>
-    @if ($isLoggedIn)
-        <img class="user_img" src="{{ $img }}" alt="">
-        <span>Bentornato {{ $name }}!</span>
-    @else
-        <p>Esegui login</p>
-    @endif
-    
-    <h1>Benvenuto in OmiPlay</h1>
-    
-    <div class="list">
-        <h4>Questa è la lista dei tuoi giochi preferiti, cosa aspetti?</h4>
-        <ul>
-            @foreach ($games as $game)
-                <li>Nome: {{ $game['name'] }} - Creato da: {{ $game['publisher'] }} - Genere: {{ $game['genre'] }}
-                </li>
-            @endforeach
-        </ul>
-    
+    <div class="header-top">
+        @if ($isLoggedIn)
+            <span>Bentornato {{ $name }}!</span>
+            <a href="{{ route('user') }}">
+                <img class="user_img" src="{{ $img }}" alt="">
+            </a>
+        @else
+            <p>Esegui login</p>
+        @endif
     </div>
+    <header>
+        <ul class="header-list">
+            <li>
+                <a href="{{ route('favorite') }}">Preferiti</a>
+            </li>
+            <li>
+                <a href="{{ route('info') }}">Info</a>
+            </li>
+            <li>
+                <a href="{{ route('contacts') }}">Assistenza</a>
+            </li>
+            <li>
+                <a href="{{ route('user') }}">Info utente</a>
+            </li>
+        </ul>
+        
+    </header>
+
+
+    
+    <main>
+        <h1>Benvenuto in OmiPlay</h1>
+    </main>
+    
+    
+    
 </body>
 </html>
 
 <style>
-    body {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+     body {
         font-family: 'Nunito', sans-serif;
-        background-color: lightskyblue;
         color: white;
+        background-color: black;
+    }
+    header,
+    .header-top{
+        background-color: lightskyblue;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    header a,
+    li{
+        list-style: none;
+        color: white;
+        text-decoration: none;
+        padding-left: 10px;
+    }
+    .header-list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 30%;
+        margin: 0 auto;
+    }
+    main {
+        background-image: url(https://www.tomshw.it/images/images/2019/06/playstation-5-40134.jpg);
+        background-size: cover;
+        height: calc(100vh - 100px)
+
     }
     h1 {
         text-align: center;
-        padding-top: 50px;
-        font-size: 5rem;
+        font-size: 4rem;
+        width: 70%;
+        padding-top: 60px;
+        margin: 0 auto;
     }
     span {
         font-size: 1.5rem;
@@ -51,12 +101,8 @@
         width: 40px;
         border-radius: 50%;
     }
-    .list {
-        text-align: center;
-        font-size: 2rem;
-    }
     ul {
-            list-style: none;
-        }
+        list-style: none;
+    }
 </style>
 
