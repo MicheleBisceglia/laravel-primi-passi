@@ -23,48 +23,70 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/info-us', function () {
-    return view('info');
+    $data = [
+        'name' => 'Michele',
+        'lastname' => 'Bisceglia',
+        'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
+        'isLoggedIn' => true,
+    ];
+    return view('info', $data);
 })->name('info');
 
 Route::get('/favorite-us', function () {
     $data = [
+            'name' => 'Michele',
+            'lastname' => 'Bisceglia',
+            'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
+            'isLoggedIn' => true,
         'games' => [
             [
-                'name' => 'GTA1',
-                'publisher' => 'Rockstar games',
-                'genre' => 'Action',
-            ],
-            [
-                'name' => 'GTA2',
-                'publisher' => 'Rockstar games',
-                'genre' => 'Action',
-            ],
-            [
-                'name' => 'GTA3',
-                'publisher' => 'Rockstar games',
-                'genre' => 'Action',
-            ],
-            [
-                'name' => 'GTA4',
-                'publisher' => 'Rockstar games',
-                'genre' => 'Action',
-            ],
-            [
-                'name' => 'GTA5',
-                'publisher' => 'Rockstar games',
-                'genre' => 'Action',
-            ],
+            'name' => 'GTA1',
+            'publisher' => 'Rockstar games',
+            'genre' => 'Action',
         ],
-    ];
+        [
+            'name' => 'GTA2',
+            'publisher' => 'Rockstar games',
+            'genre' => 'Action',
+        ],
+        [
+            'name' => 'GTA3',
+            'publisher' => 'Rockstar games',
+            'genre' => 'Action',
+         ],
+        [
+            'name' => 'GTA4',
+            'publisher' => 'Rockstar games',
+            'genre' => 'Action',
+        ],
+        [
+            'name' => 'GTA5',
+            'publisher' => 'Rockstar games',
+            'genre' => 'Action',
+        ],
+    ]
+];
     return view('favorite', $data) ;
 })->name('favorite');
 
 Route::get('/contacts-us', function () {
-    return view('contacts');
+    $data = [
+        'name' => 'Michele',
+        'lastname' => 'Bisceglia',
+        'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
+        'isLoggedIn' => true,
+    ];
+    return view('contacts', $data);
 })->name('contacts');
 
 Route::get('/user-us', function () {
-    return view('user');
+    $data = [
+        'name' => 'Michele',
+        'lastname' => 'Bisceglia',
+        'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
+        'isLoggedIn' => true,
+    ];
+    return view('user',$data);
 })->name('user');
 
 

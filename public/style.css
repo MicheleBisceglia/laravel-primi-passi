@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  background-color: black;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+header,
+.header-top{
+  background-color: lightskyblue;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
+  max-height: 100px;
+}
+header a,
+li{
+  padding-left: 10px;
+}
+.header-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 30%;
+  margin: 0 auto;
+}
+main {
+  background-image: url(https://www.tomshw.it/images/images/2019/06/playstation-5-40134.jpg);
+  background-size: cover;
+  height: calc(100vh - 100px)
+
+}
+main h1 {
+  text-align: center;
+  font-size: 4rem;
+  width: 70%;
+  padding-top: 60px;
+  margin: 0 auto;
+}
+.header-top span {
+  font-size: 1.5rem;
+  padding-right: 10px;
+  margin-top: 0;
+}
+.user_img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
