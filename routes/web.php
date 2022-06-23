@@ -17,7 +17,34 @@ Route::get('/', function () {
         'name' => 'Michele',
         'lastname' => 'Bisceglia',
         'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
-        'isLoggedIn' => true
+        'isLoggedIn' => true,
+        'games' => [
+            [
+                'name' => 'GTA1',
+                'publisher' => 'Rockstar games',
+                'genre' => 'Action',
+            ],
+            [
+                'name' => 'GTA2',
+                'publisher' => 'Rockstar games',
+                'genre' => 'Action',
+            ],
+            [
+                'name' => 'GTA3',
+                'publisher' => 'Rockstar games',
+                'genre' => 'Action',
+            ],
+            [
+                'name' => 'GTA4',
+                'publisher' => 'Rockstar games',
+                'genre' => 'Action',
+            ],
+            [
+                'name' => 'GTA5',
+                'publisher' => 'Rockstar games',
+                'genre' => 'Action',
+            ],
+        ],
     ];
     return view('home', $data);
 });

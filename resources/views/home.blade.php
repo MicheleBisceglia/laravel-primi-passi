@@ -12,9 +12,21 @@
         <img class="user_img" src="{{ $img }}" alt="">
         <span>Bentornato {{ $name }}!</span>
     @else
-        <p>Fai login</p>
+        <p>Esegui login</p>
     @endif
-    <h1>Hello world</h1>
+    
+    <h1>Benvenuto in OmiPlay</h1>
+    
+    <div class="list">
+        <h4>Questa è la lista dei tuoi giochi preferiti, cosa aspetti?</h4>
+        <ul>
+            @foreach ($games as $game)
+                <li>Nome: {{ $game['name'] }} - Creato da: {{ $game['publisher'] }} - Genere: {{ $game['genre'] }}
+                </li>
+            @endforeach
+        </ul>
+    
+    </div>
 </body>
 </html>
 
@@ -39,5 +51,12 @@
         width: 40px;
         border-radius: 50%;
     }
+    .list {
+        text-align: center;
+        font-size: 2rem;
+    }
+    ul {
+            list-style: none;
+        }
 </style>
 
