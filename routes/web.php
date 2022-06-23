@@ -41,28 +41,39 @@ Route::get('/favorite-us', function () {
         'games' => [
             [
             'name' => 'GTA1',
-            'publisher' => 'Rockstar games',
+            'publisher' => 'Rockstar',
             'genre' => 'Action',
+            'poster' => 'https://images7.alphacoders.com/421/421641.jpg'
         ],
         [
             'name' => 'GTA2',
-            'publisher' => 'Rockstar games',
+            'publisher' => 'Rockstar',
             'genre' => 'Action',
+            'poster' => 'https://images7.alphacoders.com/421/421641.jpg'
         ],
         [
             'name' => 'GTA3',
-            'publisher' => 'Rockstar games',
+            'publisher' => 'Rockstar',
             'genre' => 'Action',
+            'poster' => 'https://images7.alphacoders.com/421/421641.jpg'
          ],
         [
             'name' => 'GTA4',
-            'publisher' => 'Rockstar games',
+            'publisher' => 'Rockstar',
             'genre' => 'Action',
+            'poster' => 'https://images7.alphacoders.com/421/421641.jpg'
         ],
         [
             'name' => 'GTA5',
-            'publisher' => 'Rockstar games',
+            'publisher' => 'Rockstar',
             'genre' => 'Action',
+            'poster' => 'https://images7.alphacoders.com/421/421641.jpg'
+        ],
+        [
+            'name' => 'GTA6',
+            'publisher' => 'Rockstar',
+            'genre' => 'Action',
+            'poster' => 'https://images7.alphacoders.com/421/421641.jpg'
         ],
     ]
 ];

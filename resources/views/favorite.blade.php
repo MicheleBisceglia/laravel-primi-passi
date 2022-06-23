@@ -33,17 +33,20 @@
       <li>
         <a href="{{ route('contacts') }}">Assistenza</a>
       </li>
-      <li>
-        <a href="{{ route('user') }}">Info utente</a>
-      </li>
     </ul>
   </header>
 
   <div>
-    <h4>Giochi Preferiti</h4>
-    <ul>
+    <h2>Continua a Giocare ai tuoi titoli preferiti!</h2>
+    <ul class="card-container">
         @foreach ($games as $game)
-            <li>Nome: {{ $game['name'] }} - Creato da: {{ $game['publisher'] }} - Genere: {{ $game['genre'] }}
+            <li class="card">
+              <strong>
+                <p>{{ $game['name'] }}</p>
+                <p>{{ $game['publisher'] }}</p>
+                <p>{{ $game['genre'] }}</p> 
+              </strong>
+              <img class="game_poster" src="{{ $game['poster'] }}" alt="">
             </li>
         @endforeach
     </ul>
@@ -51,3 +54,33 @@
   </div>
 </body>
 </html>
+
+<style>
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card {
+    width: calc(100% / 4);
+    margin: 3%;
+    height: 200px;
+    background-color: black;
+    border-radius: 10px;
+  }
+  .card strong {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 30px;
+    color: white;
+    font-size: 1.5rem
+  }
+  .game_poster {
+    height: 100%;
+    width: 100%;
+    opacity: 50%;
+    object-fit: cover;
+  }
+  
+</style>

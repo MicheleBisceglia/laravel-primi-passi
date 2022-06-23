@@ -33,12 +33,9 @@
       <li>
         <a href="{{ route('contacts') }}">Assistenza</a>
       </li>
-      <li>
-        <a href="{{ route('user') }}">Info utente</a>
-      </li>
     </ul>
   </header>
 
-  <h1>Informazioni utente</h1>
+  <h2>Informazioni utente</h2>
 </body>
 </html>

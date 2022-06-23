@@ -34,12 +34,36 @@
       <li>
         <a href="{{ route('contacts') }}">Assistenza</a>
       </li>
-      <li>
-        <a href="{{ route('user') }}">Info utente</a>
-      </li>
     </ul>
   </header>
 
-  <h1>Pagina Info</h1>
+  <ul class="info-list">
+    <li>
+      <h2>Cos'è OmiPlay?</h2>
+      <h2>OmiPlay è il luogo ideale per giocare, discutere e sviluppare nuovi titoli.</h2>
+    </li>
+    <li>
+      <h2>Quali sono i vantaggi di OmiPlay?</h2>
+      <h2>
+        Accesso immediato a circa 30.000 giochi, da titoli AAA fino alle produzioni indie. Potrai godere di offerte esclusive, aggiornamenti automatici dei giochi ed altri fantastici vantaggi.
+      </h2>
+      <h2>Stringi nuove amicizie, unisciti ai gruppi, forma dei clan, usa la chat in gioco e molto altro! Con oltre 100 milioni di potenziali amici (o nemici), il divertimento non avrà limiti!</h2>
+    </li>
+    <li>
+      <h2>Inoltre siamo costantemente al lavoro per portare nuovi aggiornamenti e funzionalità su Omiplay, ad esempio:</h2>
+      <h2>E molto altro ancora...
+        Sblocca gli achievement, leggi le recensioni, scopri i titoli consigliati per te e molto altro.</h2>
+    </li>
+  </ul>
 </body>
 </html>
+
+<style>
+  .info-list li{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid gray;
+    width: 80%;
+    margin: 0 auto;
+  }
+</style>
