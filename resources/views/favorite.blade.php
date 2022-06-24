@@ -74,13 +74,20 @@
     margin-left: 15px;
     margin-top: 30px;
     color: white;
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    display: none;
   }
   .game_poster {
     height: 100%;
     width: 100%;
-    opacity: 50%;
+    opacity: 100%;
     object-fit: cover;
+  }
+  .card:hover .game_poster{
+    opacity: 30%;
+  }
+  .card:hover strong{
+    display: inline;
   }
   
 </style>

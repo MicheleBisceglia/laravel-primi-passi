@@ -37,6 +37,41 @@
     </ul>
   </header>
 
-  <h2>Pagina assistenza conta</h2>
+  <h2>Stai cercando di contattare il servizio clienti di OmiPlay? Ecco tutti i dettagli e i canali aggiornati per contattare OmiPlay, inclusi numeri di telefono, account dei social media, sito web ufficiale e altro ancora.</h2>
+  <ul>
+    <li>
+      <h3>
+        Numero di Telefono: (800 221 234 22)
+      </h3>
+    </li>
+    <li>
+      <h3>
+        Email: Omiplay_assistenza@info.it
+      </h3>
+    </li>
+    <li>
+      <h3>
+        Facebook: Assistenza OmiPlay
+      </h3>
+    </li>
+    <li>
+      <h3>
+        Twitter: @ OmiPlay_Support
+      </h3>
+    </li>
+    <li>
+      <h3>
+        Indirizzo: Via Delle Api n 23 Foggia 
+      </h3>
+    </li>
+  </ul>
 </body>
 </html>
+
+<style>
+  h2,h3 {
+    padding-top: 30px;
+    width: 80%;
+    margin: 0 auto;
+  }
+</style>
