@@ -17,7 +17,7 @@
             <img class="user_img" src="{{ $img }}" alt="">
         </a>
     @else
-        <p>Esegui login</p>
+        <a href="{{ route('home') }}">Esegui login</a>
     @endif
   </div>
   <header>

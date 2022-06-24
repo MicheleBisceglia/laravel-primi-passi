@@ -86,7 +86,7 @@ Route::get('/user-us', function () {
         'isLoggedIn' => true,
         'username' => 'Mikael22',
         'games_played' => '12',
-        'trophies' => '147'
+        'trophies' => '147',
     ];
     return view('user',$data);
 })->name('user');
