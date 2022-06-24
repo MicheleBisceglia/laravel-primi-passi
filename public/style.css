@@ -5,7 +5,11 @@
 }
 body {
   font-family: 'Nunito', sans-serif;
-  color: white;
+  color: black;
+}
+main {
+  height: calc(100vh - 160px);
+  overflow-y: auto;
 }
 ul {
   list-style: none;
@@ -17,7 +21,6 @@ a {
 h2,h3{
   text-align: center;
   margin-top: 10px;
-  color: black;
 }
 header,
 .header-top{
@@ -35,19 +38,6 @@ li{
   display: flex;
   justify-content: space-between;
   max-width: 30%;
-  margin: 0 auto;
-}
-main {
-  background-image: url(https://www.tomshw.it/images/images/2019/06/playstation-5-40134.jpg);
-  background-size: cover;
-  height: calc(100vh - 100px)
-
-}
-main h1 {
-  text-align: center;
-  font-size: 4rem;
-  width: 70%;
-  padding-top: 60px;
   margin: 0 auto;
 }
 .header-top span {

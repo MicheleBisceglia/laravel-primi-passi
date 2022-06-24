@@ -12,31 +12,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*Home*/
 Route::get('/', function () {
-    $data = [
-        'name' => 'Michele',
-        'lastname' => 'Bisceglia',
-        'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
-        'isLoggedIn' => true,
-    ];
-    return view('home', $data) ;
+    return view('home') ;
 })->name('home');
+/* /Home */
 
+/*Info*/
 Route::get('/info-us', function () {
-    $data = [
-        'name' => 'Michele',
-        'lastname' => 'Bisceglia',
-        'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
-        'isLoggedIn' => true,
-    ];
-    return view('info', $data);
+    return view('info');
 })->name('info');
+/* /Info */
 
+/* Preferiti */
 Route::get('/favorite-us', function () {
     $data = [
-            'name' => 'Michele',
-            'lastname' => 'Bisceglia',
-            'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
             'isLoggedIn' => true,
         'games' => [
             [
@@ -67,7 +57,7 @@ Route::get('/favorite-us', function () {
             'name' => 'Horizon Zero Down',
             'publisher' => 'Sony',
             'genre' => 'Action',
-            'poster' => 'https://lh3.googleusercontent.com/xxuhdcf85QVGXh9GVfFCCjJP1GRmVVnz273Ln6vMAPT27WJoNNU8qKyC269leCLdUwqM-uC_91hXjhqiRvSBrMnMufc=w640-h400-e365-rj-sc0x00ffffff'
+            'poster' => 'https://image.api.playstation.com/vulcan/img/rnd/202009/2923/LyLrdlIfqiVzvynWJGtNfbU8.png'
         ],
         [
             'name' => 'FIFA22',
@@ -79,17 +69,15 @@ Route::get('/favorite-us', function () {
 ];
     return view('favorite', $data) ;
 })->name('favorite');
+/* /Preferiti */
 
+/* Assistenza */
 Route::get('/contacts-us', function () {
-    $data = [
-        'name' => 'Michele',
-        'lastname' => 'Bisceglia',
-        'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
-        'isLoggedIn' => true,
-    ];
-    return view('contacts', $data);
+    return view('contacts');
 })->name('contacts');
+/* /Assistenza */
 
+/* Utente */
 Route::get('/user-us', function () {
     $data = [
         'name' => 'Michele',
@@ -102,5 +90,6 @@ Route::get('/user-us', function () {
     ];
     return view('user',$data);
 })->name('user');
+/* /Utente */
 
 

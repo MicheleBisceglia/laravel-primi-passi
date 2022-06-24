@@ -9,43 +9,40 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header-top">
-        @if ($isLoggedIn)
-            <span>Bentornato {{ $name }}!</span>
-            <a href="{{ route('user') }}">
-                <img class="user_img" src="{{ $img }}" alt="">
-            </a>
-        @else
-            <p>Esegui login</p>
-        @endif
-    </div>
-    <header>
-        <ul class="header-list">
-            <li>
-                <a href="{{ route('home') }}">home</a>
-            </li>
-            <li>
-                <a href="{{ route('favorite') }}">Preferiti</a>
-            </li>
-            <li>
-                <a href="{{ route('info') }}">Info</a>
-            </li>
-            <li>
-                <a href="{{ route('contacts') }}">Assistenza</a>
-            </li>
-        </ul>
-        
-    </header>
+    <!-- Header -->
+    @include('partials.header', [
+        'name' => 'Michele',
+        'lastname' => 'Bisceglia',
+        'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
+        'isLoggedIn' => true,
+    ])
+    <!-- / Header -->
 
-
-    
     <main>
         <h1>Benvenuto in OmiPlay</h1>
     </main>
-    
-    
+
+    <!-- Footer -->
+    @include('partials.footer')
+    <!-- / Footerr -->
     
 </body>
 </html>
+
+<style>
+main {
+  background-image: url(https://www.tomshw.it/images/images/2019/06/playstation-5-40134.jpg);
+  background-size: cover;
+}
+main h1 {
+  text-align: center;
+  font-size: 4rem;
+  width: 70%;
+  padding-top: 60px;
+  margin: 0 auto;
+  color: white;
+}
+</style>
+
 
 

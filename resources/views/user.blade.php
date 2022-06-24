@@ -10,48 +10,36 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="header-top">
-    @if ($isLoggedIn)
-        <span>Bentornato {{ $name }}!</span>
-        <a href="{{ route('user') }}">
-            <img class="user_img" src="{{ $img }}" alt="">
-        </a>
-    @else
+<!-- Header -->
+  @include('partials.header', [
+  'name' => 'Michele',
+  'lastname' => 'Bisceglia',
+  'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
+  'isLoggedIn' => true,
+  ])
+<!-- / Header -->
+  <main>
+    <div>
+      @if ($isLoggedIn)
+        <h3>{{ $name }} {{ $lastname }}</h3>
+        <h3>
+          <i class="fas fa-user"></i> {{ $username }}</h3>
+        <h3>
+          <i class="fas fa-gamepad"></i> {{ $games_played}}</h3>
+        <h3>
+          <i class="fas fa-trophy"></i> {{ $trophies}}
+        </h3>
+        
+      @else
         <p>Esegui login</p>
-    @endif
-  </div>
-  <header>
-    <ul class="header-list">
-      <li>
-        <a href="{{ route('home') }}">home</a>
-      </li>
-      <li>
-        <a href="{{ route('favorite') }}">Preferiti</a>
-      </li>
-      <li>
-        <a href="{{ route('info') }}">Info</a>
-      </li>
-      <li>
-        <a href="{{ route('contacts') }}">Assistenza</a>
-      </li>
-    </ul>
-  </header>
+      @endif
+    </div>
+  </main>
 
-  <div>
-    @if ($isLoggedIn)
-      <h3>{{ $name }} {{ $lastname }}</h3>
-      <h3>
-        <i class="fas fa-user"></i> {{ $username }}</h3>
-      <h3>
-        <i class="fas fa-gamepad"></i> {{ $games_played}}</h3>
-      <h3>
-        <i class="fas fa-trophy"></i> {{ $trophies}}
-      </h3>
-      
-    @else
-      <p>Esegui login</p>
-    @endif
-  </div>
+  <!-- Footer -->
+  @include('partials.footer')
+  <!-- / Footerr -->
+
 </body>
 </html>
 

@@ -10,61 +10,40 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="header-top">
-    @if ($isLoggedIn)
-        <span>Bentornato {{ $name }}!</span>
-        <a href="{{ route('user') }}">
-            <img class="user_img" src="{{ $img }}" alt="">
-        </a>
-    @else
-        <p>Esegui login</p>
-    @endif
-</div>
-<header>
-    <ul class="header-list">
+<!-- Header -->
+  @include('partials.header', [
+  'name' => 'Michele',
+  'lastname' => 'Bisceglia',
+  'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
+  'isLoggedIn' => true,
+  ])
+<!-- / Header -->
+
+  <main>
+    <h2>Stai cercando di contattare il servizio clienti di OmiPlay? Ecco tutti i dettagli e i canali aggiornati per contattare OmiPlay, inclusi numeri di telefono, account dei social media, sito web ufficiale e altro ancora.</h2>
+    <ul>
       <li>
-        <a href="{{ route('home') }}">home</a>
+        <h3>Numero di Telefono: (800 221 234 22)</h3>
       </li>
       <li>
-        <a href="{{ route('favorite') }}">Preferiti</a>
+        <h3>Email: Omiplay_assistenza@info.it</h3>
       </li>
       <li>
-        <a href="{{ route('info') }}">Info</a>
+        <h3>Facebook: Assistenza OmiPlay</h3>
       </li>
       <li>
-        <a href="{{ route('contacts') }}">Assistenza</a>
+        <h3>Twitter: @ OmiPlay_Support</h3>
+      </li>
+      <li>
+        <h3>Indirizzo: Via Delle Api n 23 Foggia</h3>
       </li>
     </ul>
-  </header>
+  </main>
 
-  <h2>Stai cercando di contattare il servizio clienti di OmiPlay? Ecco tutti i dettagli e i canali aggiornati per contattare OmiPlay, inclusi numeri di telefono, account dei social media, sito web ufficiale e altro ancora.</h2>
-  <ul>
-    <li>
-      <h3>
-        Numero di Telefono: (800 221 234 22)
-      </h3>
-    </li>
-    <li>
-      <h3>
-        Email: Omiplay_assistenza@info.it
-      </h3>
-    </li>
-    <li>
-      <h3>
-        Facebook: Assistenza OmiPlay
-      </h3>
-    </li>
-    <li>
-      <h3>
-        Twitter: @ OmiPlay_Support
-      </h3>
-    </li>
-    <li>
-      <h3>
-        Indirizzo: Via Delle Api n 23 Foggia 
-      </h3>
-    </li>
-  </ul>
+  <!-- Footer -->
+  @include('partials.footer')
+  <!-- / Footerr -->
+
 </body>
 </html>
 

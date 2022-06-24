@@ -9,49 +9,43 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="header-top">
-    @if ($isLoggedIn)
-        <span>Bentornato {{ $name }}!</span>
-        <a href="{{ route('user') }}">
-            <img class="user_img" src="{{ $img }}" alt="">
-        </a>
+<!-- Header -->
+  @include('partials.header', [
+  'name' => 'Michele',
+  'lastname' => 'Bisceglia',
+  'img' => 'https://it.videogamer.com/wp-content/uploads/2017/10/gran-turismo-sport-keyart-1-e1508203779494.png',
+  'isLoggedIn' => true,
+  ])
+<!-- / Header -->
+  <main>
+    @if ($isLoggedIn)  
+    <div>
+      <h2>Continua a Giocare ai tuoi titoli preferiti!</h2>
+      <ul class="card-container">
+          @foreach ($games as $game)
+              <li class="card">
+                <strong>
+                  <p>{{ $game['name'] }}</p>
+                  <p>{{ $game['publisher'] }}</p>
+                  <p>{{ $game['genre'] }}</p> 
+                </strong>
+                <img class="game_poster" src="{{ $game['poster'] }}" alt="">
+              </li>
+          @endforeach
+      </ul>
+    </div>
     @else
-        <p>Esegui login</p>
+      <h3>Inserisci le tue credenziali</h3>
+      <div class="my_input">
+        <input type="text" placeholder="Inserisci indirizzo email">
+        <input type="text" placeholder="Inserisci la tua password">
+      </div> 
     @endif
-  </div>
-  <header>
-    <ul class="header-list">
-      <li>
-        <a href="{{ route('home') }}">home</a>
-      </li>
-      <li>
-        <a href="{{ route('favorite') }}">Preferiti</a>
-      </li>
-      <li>
-        <a href="{{ route('info') }}">Info</a>
-      </li>
-      <li>
-        <a href="{{ route('contacts') }}">Assistenza</a>
-      </li>
-    </ul>
-  </header>
+  </main>
 
-  <div>
-    <h2>Continua a Giocare ai tuoi titoli preferiti!</h2>
-    <ul class="card-container">
-        @foreach ($games as $game)
-            <li class="card">
-              <strong>
-                <p>{{ $game['name'] }}</p>
-                <p>{{ $game['publisher'] }}</p>
-                <p>{{ $game['genre'] }}</p> 
-              </strong>
-              <img class="game_poster" src="{{ $game['poster'] }}" alt="">
-            </li>
-        @endforeach
-    </ul>
-
-  </div>
+  <!-- Footer -->
+  @include('partials.footer')
+  <!-- / Footerr -->
 </body>
 </html>
 
@@ -88,6 +82,12 @@
   }
   .card:hover strong{
     display: inline;
+  }
+
+  .my_input {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
   }
   
 </style>
