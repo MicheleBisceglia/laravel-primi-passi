@@ -73,9 +73,10 @@
   }
   .game_poster {
     height: 100%;
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
     opacity: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   .card:hover .game_poster{
     opacity: 30%;

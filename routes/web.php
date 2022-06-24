@@ -45,7 +45,7 @@ Route::get('/favorite-us', function () {
             'name' => 'Red Dead Redemption',
             'publisher' => 'Rockstar',
             'genre' => 'Action',
-            'poster' => 'https://images.ctfassets.net/wn7ipiv9ue5v/6ZSV0CNlsw4xhNcCNK4haj/82d0f54cf5010ab9f05a5e5558d3b4f0/RDR2_HeroSquare_1080x1080.jpg'
+            'poster' => 'https://ps5giochiguida.com/wp-content/uploads/2022/01/1641843184_Rumor-laggiornamento-di-nuova-generazione-di-Red-Dead-Redemption-2.jpg'
          ],
         [
             'name' => 'F1 22',
@@ -63,7 +63,7 @@ Route::get('/favorite-us', function () {
             'name' => 'FIFA22',
             'publisher' => 'EA sports',
             'genre' => 'Sport',
-            'poster' => 'https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_FIFA22NintendoSwitchLegacyEdition_image1600w.jpg'
+            'poster' => 'https://xboxplay.games/uploadStream/21884.jpg'
         ],
     ]
 ];
